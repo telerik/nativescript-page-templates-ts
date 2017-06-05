@@ -30,6 +30,6 @@ export class LoginViewModel extends Observable {
         }
     }
 
-    onSignIn() {
+    signIn() {
     }
 }

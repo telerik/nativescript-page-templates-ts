@@ -41,10 +41,20 @@ export function onNavigatingTo(args: EventData) {
     page.bindingContext = loginViewModel;
 }
 
-export function onLoginFacebook(eventData: LoginEventData) {
+export function onLoginFacebookButtonTap(eventData: LoginEventData) {
     if (!eventData.error) {
         frameModule.topmost().navigate({
             moduleName: "home/home-page"
         });
     }
+}
+
+export function onLoginGoogleButtonTap() {
+}
+
+export function onForgotPasswordTap() {
+}
+
+export function onSignInButtonTap() {
+    loginViewModel.signIn();
 }
