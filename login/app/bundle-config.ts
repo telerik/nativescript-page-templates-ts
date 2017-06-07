@@ -4,5 +4,4 @@ if ((<any>global).TNS_WEBPACK) {
 
     //register application modules
     global.registerModule("login/login-page", () => require("./login/login-page"));
-    global.registerModule("home/home-page", () => require("./home/home-page"));
 }

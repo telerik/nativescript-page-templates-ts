@@ -16,6 +16,9 @@ import { LoginViewModel } from './login-view-model';
 import { LoginEventData } from "nativescript-facebook";
 import frameModule = require("ui/frame");
 
+import * as application from 'application';
+
+var nsFacebook = require('nativescript-facebook');
 var loginViewModel = new LoginViewModel();
 
 // Event handler for Page "navigatingTo" event attached in main-page.xml
@@ -26,6 +29,8 @@ export function onNavigatingTo(args: EventData) {
     https://docs.nativescript.org/api-reference/classes/_ui_page_.page.html
     */
     let page = <Page>args.object;
+
+    nsFacebook.init("1771472059772879");
 
     /*
     A page’s bindingContext is an object that should be used to perform
@@ -41,12 +46,10 @@ export function onNavigatingTo(args: EventData) {
     page.bindingContext = loginViewModel;
 }
 
-export function onLoginFacebookButtonTap(eventData: LoginEventData) {
-    if (!eventData.error) {
-        frameModule.topmost().navigate({
-            moduleName: "home/home-page"
-        });
-    }
+export function onLogoutFacebook(eventData: LoginEventData) {
+}
+
+export function onLoginFacebook(eventData: LoginEventData) {
 }
 
 export function onLoginGoogleButtonTap() {

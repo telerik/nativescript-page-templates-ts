@@ -6,13 +6,6 @@ purpose of the file is to pass control to the app’s first module.
 
 import "./bundle-config";
 import * as app from 'application';
-import * as application from 'application';
-
-var nsFacebook = require('nativescript-facebook');
-
-application.on(application.launchEvent, function (args) {
-    nsFacebook.init("1771472059772879");
-});
 
 app.start({ moduleName: 'login/login-page' });
 
