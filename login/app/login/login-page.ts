@@ -10,46 +10,21 @@ JavaScript modules. The CommonJS require() function is how you import
 JavaScript modules defined in other files.
 */
 
-import { EventData } from 'data/observable';
-import { Page } from 'ui/page';
-import { LoginViewModel } from './login-view-model';
-import { LoginEventData } from "nativescript-facebook";
+import { EventData } from "data/observable";
+import { Page } from "ui/page";
+import { LoginViewModel } from "./login-view-model";
 import frameModule = require("ui/frame");
 
-import * as application from 'application';
+import * as application from "application";
 
-var nsFacebook = require('nativescript-facebook');
-var loginViewModel = new LoginViewModel();
+const loginViewModel = new LoginViewModel();
 
-// Event handler for Page "navigatingTo" event attached in main-page.xml
 export function onNavigatingTo(args: EventData) {
-    /*
-    This gets a reference this page’s <Page> UI component. You can
-    view the API reference of the Page to see what’s available at
-    https://docs.nativescript.org/api-reference/classes/_ui_page_.page.html
-    */
-    let page = <Page>args.object;
-
-    nsFacebook.init("1771472059772879");
-
-    /*
-    A page’s bindingContext is an object that should be used to perform
-    data binding between XML markup and TypeScript code. Properties
-    on the bindingContext can be accessed using the {{ }} syntax in XML.
-    In this example, the {{ message }} and {{ onTap }} bindings are resolved
-    against the object returned by createViewModel().
-
-    You can learn more about data binding in NativeScript at
-    https://docs.nativescript.org/core-concepts/data-binding.
-    */
-
+    const page = <Page>args.object;
     page.bindingContext = loginViewModel;
 }
 
-export function onLogoutFacebook(eventData: LoginEventData) {
-}
-
-export function onLoginFacebook(eventData: LoginEventData) {
+export function onLoginFacebookButtonTap() {
 }
 
 export function onLoginGoogleButtonTap() {
