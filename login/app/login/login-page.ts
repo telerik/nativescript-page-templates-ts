@@ -24,15 +24,24 @@ export function onNavigatingTo(args: EventData) {
     page.bindingContext = loginViewModel;
 }
 
-export function onLoginFacebookButtonTap() {
+/* ***********************************************************
+* TODO: Implement Facebook login.
+*************************************************************/
+export function onLoginFacebookButtonTap(): void {
 }
 
-export function onLoginGoogleButtonTap() {
+/* ***********************************************************
+* TODO: Implement Google login.
+*************************************************************/
+export function onLoginGoogleButtonTap(): void {
 }
 
-export function onForgotPasswordTap() {
+/* ***********************************************************
+* TODO: Implement forgot password.
+*************************************************************/
+export function onForgotPasswordTap(): void {
 }
 
-export function onSignInButtonTap() {
+export function onSignInButtonTap(): void {
     loginViewModel.signIn();
 }

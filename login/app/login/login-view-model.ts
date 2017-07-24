@@ -9,6 +9,9 @@ export class LoginViewModel extends Observable {
         super();
     }
 
-    signIn() {
+    /* ***********************************************************
+    * TODO: Implement signin.
+    *************************************************************/
+    signIn(): void {
     }
 }
