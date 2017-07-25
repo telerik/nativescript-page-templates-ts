@@ -5,7 +5,6 @@ You can find a full list of user interface components you can use in your app at
 https://docs.nativescript.org/ui/components.
 -->
 <Page navigatingTo="onNavigatingTo" class="page"
-    xmlns:Facebook="nativescript-facebook"
     xmlns="http://schemas.nativescript.org/tns.xsd" >
     <!--
     The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
@@ -15,7 +14,7 @@ https://docs.nativescript.org/ui/components.
     </ActionBar>
 
      <StackLayout>
-        <Facebook:LoginButton login="onLoginFacebook" logout="onLogoutFacebook"></Facebook:LoginButton>
+        <Button text="Log in with Facebook" tap="onLoginFacebookButtonTap"></Button>
         <Button text="Log in with Google +" tap="onLoginGoogleButtonTap"></Button>
         <Label text="or"></Label>
 
