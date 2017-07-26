@@ -11,7 +11,7 @@ export class SignupViewModel extends Observable {
     }
 
     /* ***********************************************************
-    * TODO: Implement signin.
+    * TODO: Implement sign up.
     *************************************************************/
     signup() {
     }
