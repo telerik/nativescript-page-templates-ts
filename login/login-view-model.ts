@@ -1,17 +1,20 @@
 import { Observable } from "data/observable";
 import { ObservableProperty } from "./observable-property-decorator";
 
-export class <%=PascalCaseName%>ViewModel extends Observable {
+export class <%= PascalCaseName %>ViewModel extends Observable {
+    @ObservableProperty() email: string;
     @ObservableProperty() password: string;
-    @ObservableProperty() username: string;
 
     constructor() {
         super();
     }
 
-    /* ***********************************************************
-    * TODO: Implement signin.
-    *************************************************************/
     signIn(): void {
+        const email = this.email;
+        const password = this.password;
+
+        /* ***********************************************************
+        * Call your custom sign in logic using the email and password data.
+        *************************************************************/
     }
 }
