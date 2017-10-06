@@ -12,7 +12,7 @@ export function onNavigatingTo(args: EventData) {
     page.bindingContext = new <%= PascalCaseName %>ViewModel();
 }
 
-function onSignupWithSocialProvider() {
+function onSignupWithSocialProviderButtonTap() {
     /* ***********************************************************
     * For sign up with social provider you can add your custom logic or
     * use NativeScript plugin for sign up with Facebook
